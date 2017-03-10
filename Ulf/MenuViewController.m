@@ -35,7 +35,7 @@
     
     // start asynchron download
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-        NSData * jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://openmensa.org/api/v2/canteens/112/meals"]];
+        NSData * jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://openmensa.org/api/v2/canteens/112/meals"]];
         // callback routine
         dispatch_async(dispatch_get_main_queue(), ^(void){
             if (jsonData != nil){
